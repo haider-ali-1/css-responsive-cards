@@ -1,3 +1,15 @@
+:root {
+  --font-family: "Arial", "Helvetica", sans-serif;
+
+  --color-bg-body: #ffffff;
+  --color-heading: #2c2f34;
+  --color-bg-header-footer: #e8ecef;
+  --color-title: #373b3e;
+  --color-content: #373b3e;
+
+  --border-color: #d3d3d3;
+}
+
 *,
 *::before,
 *::after {
@@ -11,8 +23,9 @@ body {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #ffffff;
+  font-family: var(--font-family);
+  background-color: var(--color-bg-body);
+  line-height: 1.5;
 }
 
 .container {
@@ -25,14 +38,16 @@ body {
 
 header,
 footer {
-  background-color: #e8ecef;
-  padding: 4rem 2rem;
+  background-color: var(--color-bg-header-footer);
+  padding: 3.5rem 2rem;
 }
 
 header p,
 footer p {
-  font-size: 2rem;
+  color: var(--color-heading);
+  font-size: 30px;
 }
+
 /* Header and Footer styles End */
 
 /* Card Styles */
@@ -45,13 +60,19 @@ footer p {
 
 .card {
   padding: 1rem;
-  border: 1px solid #e8ecef;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
 }
 
-.card .card__header {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+.card .card__title {
+  margin-bottom: 0.75rem;
+  color: var(--color-title);
+  font-size: 20px;
+}
+
+.card .card__content {
+  color: var(--color-content);
+  font-size: 16px;
 }
 
 /* Card Styles End*/
